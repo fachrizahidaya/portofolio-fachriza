@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #container {
+      /* background-color: salmon; */
+      width: 500px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 100px 150px 40px 200px 150px;
+      gap: 10px;
+    }
+    #container div {
+      background-color: lightblue;
+      /* border: 1px solid black; */
+    }
+    #container div:nth-child(8) {
+      background-color: white;
+
+    }
+
+    #div-1,
+    #div-2,
+    #div-9 {
+      flex-direction: column;
+      
+      width: 500px;
+      height: 100px;
+      
+    }
+
+    #div-7
+     {
+      grid-column: span 2;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    #div-8 {
+      display: flex;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+    #div-3,
+    #div-4,
+    #div-5,
+    #div-6 {
+      flex-direction: row;
+      
+      width: 100px;
+      height: 100px;
+      
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="div-1">1</div>
+        <div id="div-2">2</div>
+        <div id="div-3">3</div>
+        <div id="div-4">4</div>
+        <div id="div-5">5</div>
+        <div id="div-6">6</div>
+        <div id="div-7">7</div>
+        <div id="div-8">
+          <div>8.1</div>
+          <div>8.2</div>
+        </div>
+        <div id="div-9">9</div>
+      </div>
+</body>
+</html>
